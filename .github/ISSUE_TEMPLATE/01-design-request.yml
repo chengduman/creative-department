@@ -1,0 +1,54 @@
+# 设计需求
+name: 🎨 设计需求
+description: 提交设计任务（PPT、图表、信息图等）
+title: "[设计] "
+labels: ["设计需求"]
+assignees: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 设计类型
+      options:
+        - PPT制作
+        - 报告插图/示意图
+        - 信息图（Infographic）
+        - 架构图/产业链图谱
+        - 数据图表美化
+        - SVG/Excalidraw图形
+        - 视频/动画
+    validations:
+      required: true
+  - type: dropdown
+    id: style
+    attributes:
+      label: 风格要求
+      options:
+        - 麦肯锡式（专业严谨）
+        - 科技感（深色系/发光元素）
+        - 手绘风（Excalidraw风格）
+        - 简约商务
+        - 信息量大（图表密集型）
+        - 按品牌规范（默认）
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容素材
+      description: 附上需要呈现的文字/数据/参考图
+      placeholder: 粘贴内容或说明设计目标
+    validations:
+      required: true
+  - type: dropdown
+    id: assign
+    attributes:
+      label: 指派给
+      options:
+        - 方文君（部长分配）
+        - 石磊（设计师-PPT/排版）
+        - 任晓彤（设计师-信息图/架构图）
+        - 秦悦（内容策划）
+  - type: input
+    id: deadline
+    attributes:
+      label: 截止日期
+      placeholder: YYYY-MM-DD
